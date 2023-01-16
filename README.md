@@ -1,4 +1,6 @@
-# dice
+# dice 
+
+THIS IS SIMPLE DICE ROLE APPLICATION LIKE IN LUDO
 
 
 
