@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'dart:math';
 
@@ -37,8 +38,11 @@ class _dicepageState extends State<dicepage> {
           Expanded(
               child: TextButton(
                 onPressed: () {
+                  var y = rand();
+                  var z =rand();
                   setState(() {
-                    left = Random().nextInt(6)+1;
+                    right = z;
+                    left = y;
                   });
                 },
                   child: Image.asset('images/dice$left.png')),
@@ -46,8 +50,12 @@ class _dicepageState extends State<dicepage> {
           Expanded(
               child: TextButton(
                 onPressed: () {
+                  var x = rand();
+                  var w =rand();
                   setState(() {
-                    right = Random().nextInt(6)+1;
+                    // right = Random().nextInt(6)+1;
+                    left = w;
+                    right = x;
                   });
                 },
                   child: Image.asset('images/dice$right.png')),
@@ -56,5 +64,10 @@ class _dicepageState extends State<dicepage> {
       ),
     );
   }
+}
+int rand()
+{
+  var com = Random().nextInt(6)+1;
+  return com;
 }
 
